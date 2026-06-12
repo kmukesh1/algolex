@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kmukesh1.github.io/-algolex-site/sitemap.xml
