@@ -3,76 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoLex Solutions | Quantum AI, Education & Legal Services</title>
-    <meta name="description" content="AlgoLex Solutions offers Quantum AI solutions, AI-powered JEE/NEET coaching (online & offline), and expert legal consultancy. Founded by Prof. Mukesh Kumar.">
-    <meta name="keywords" content="Quantum AI, JEE coaching, NEET coaching, AI education, legal consultancy, AlgoLex Solutions">
+    <title>AlgoLex Solutions | Quantum AI, World-Class Education & Legal Services</title>
+    <meta name="description" content="AlgoLex Solutions bridges Quantum AI Research, premium AI-powered education (JEE, NEET, IB, IGCSE), and expert legal consultancy. Founded by Prof. Mukesh Kumar, PhD Researcher in Quantum AI.">
+    <meta name="keywords" content="Quantum AI, JEE coaching, NEET coaching, IB coaching, IGCSE, legal consultancy, quantitative trading, AlgoLex Solutions, Prof. Mukesh Kumar">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --primary: #1e40af; --dark: #0f172a; --accent: #3b82f6; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-        nav { background: var(--dark); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; text-decoration: none; margin: 0 18px; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, #0f172a, #1e40af); color: white; text-align: center; padding: 140px 20px 100px; }
-        .hero h1 { font-size: 3.6rem; margin-bottom: 20px; }
-        .btn { background: var(--accent); color: white; padding: 16px 36px; text-decoration: none; border-radius: 50px; font-weight: 600; }
-        .section { padding: 90px 5%; text-align: center; }
-        .services { background: #f8fafc; }
-        .card { background: white; border-radius: 16px; padding: 35px; margin: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+        }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .modern-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.3), 0 4px 6px -4px rgb(37 99 235 / 0.3);
+        }
+        .glass {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+        .premium-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-    <nav>
-        <div><strong>AlgoLex Solutions</strong></div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="services.html">Services</a>
-            <a href="quantum-ai.html">Quantum AI</a>
-            <a href="#contact">Contact</a>
+    <!-- NAV -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">AL</span>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl font-semibold tracking-tighter">AlgoLex</span>
+                        <span class="text-xs text-slate-500 block -mt-1">SOLUTIONS</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600">Home</a>
+                    <a href="services.html" class="nav-link text-slate-700 hover:text-blue-600">Services</a>
+                    <a href="courses.html" class="nav-link text-slate-700 hover:text-blue-600">Courses</a>
+                    <a href="quantum-ai.html" class="nav-link text-slate-700 hover:text-blue-600">Quantum AI</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="#contact" 
+                       class="px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 rounded-3xl transition-colors">
+                        Contact
+                    </a>
+                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
+                       class="modern-btn px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Book Consultation</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-2xl transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white px-8 py-6">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="index.html" class="py-2 text-slate-700">Home</a>
+                <a href="services.html" class="py-2 text-slate-700">Services</a>
+                <a href="courses.html" class="py-2 text-slate-700">Courses</a>
+                <a href="quantum-ai.html" class="py-2 text-slate-700">Quantum AI</a>
+                <div class="pt-4 border-t flex flex-col gap-y-3">
+                    <a href="#contact" class="py-2.5 text-center text-slate-700 font-medium border border-slate-200 rounded-3xl">Contact Us</a>
+                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
+                       class="py-3 text-center bg-blue-600 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
+                        <i class="fa-solid fa-calendar-check"></i> 
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>AlgoLex Solutions</h1>
-        <p>Bridging <strong>Quantum AI Research</strong>, World-Class Education & Expert Legal Services</p>
-        <p>Founded by <strong>Prof. Mukesh Kumar</strong> – Professor (CSE, SMIT) & Quantum AI PhD Researcher</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
+    <!-- HERO -->
+    <section class="hero-bg text-white pt-20 pb-24 px-6">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium tracking-wider">EST. 2024 • INDIA</span>
+                </div>
 
-    <section id="services" class="section services">
-        <h2>Our Services</h2>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px;">
-            <div class="card">
-                <h3>🔬 Quantum AI & ML</h3>
-                <p>Custom Quantum Machine Learning models and intelligent systems.</p>
-            </div>
-            <div class="card">
-                <h3>📈 Quantitative Trading</h3>
-                <p>Algorithmic trading strategies, backtesting & risk management.</p>
-            </div>
-            <div class="card">
-                <h3>⚖️ Legal Consultancy</h3>
-                <p>Tech contracts, IP protection & regulatory compliance.</p>
-            </div>
-            <div class="card">
-                <h3>🎓 AI Education</h3>
-                <p>JEE, NEET, IB & IGCSE coaching (Online + Offline).</p>
+                <h1 class="font-display text-6xl md:text-7xl leading-[1.05] tracking-tighter mb-6">
+                    Quantum AI.<br>
+                    World-Class Education.<br>
+                    <span class="text-blue-300">Expert Legal Guidance.</span>
+                </h1>
+                
+                <p class="max-w-2xl mx-auto text-xl text-blue-100 mb-10">
+                    Founded by <strong>Prof. Mukesh Kumar</strong> — Professor of Computer Science & Quantum AI PhD Researcher.
+                    We deliver cutting-edge solutions at the intersection of technology, education, and law.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#services" 
+                       class="modern-btn group inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-white text-slate-900 font-semibold text-lg rounded-3xl hover:bg-blue-50 transition-all">
+                        Explore Services
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
+                       class="modern-btn inline-flex items-center justify-center gap-x-3 px-8 py-4 border border-white/40 hover:bg-white/10 text-white font-semibold text-lg rounded-3xl transition-all">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Book a Strategy Call</span>
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center justify-center gap-x-8 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 bg-white/90 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=32" alt=""></div>
+                        <div class="w-8 h-8 bg-white/90 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=28" alt=""></div>
+                        <div class="w-8 h-8 bg-white/90 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=47" alt=""></div>
+                    </div>
+                    <p class="text-blue-200 text-sm">Trusted by 200+ students & professionals</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <h2>Our Founder</h2>
-        <img src="https://via.placeholder.com/300x300/1e40af/white?text=Prof.+Mukesh+Kumar" alt="Prof. Mukesh Kumar" width="300">
-        <h3>Prof. Mukesh Kumar</h3>
-        <p>Professor, CSE Department, SMIT College<br>PhD Researcher in Quantum AI</p>
+    <!-- SERVICES -->
+    <section id="services" class="max-w-screen-2xl mx-auto px-6 pt-20 pb-16">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+            <span class="text-blue-600 font-semibold tracking-[3px] text-sm">WHAT WE OFFER</span>
+            <h2 class="section-header mt-3 text-slate-900">Expertise Across<br>Four Strategic Domains</h2>
+            <p class="mt-4 text-lg text-slate-600">Integrated solutions designed for the modern world.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <a href="quantum-ai.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-atom text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Quantum AI & Machine Learning</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">Custom Quantum ML models, intelligent automation systems, and advanced optimization research.</p>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
+                    Explore Quantum AI <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
+                </span>
+            </a>
+
+            <!-- Service 2 -->
+            <a href="services.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-chart-line text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Quantitative Trading</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">Algorithmic trading strategies, robust backtesting frameworks, and AI-driven market intelligence.</p>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
+                    Learn more <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
+                </span>
+            </a>
+
+            <!-- Service 3 -->
+            <a href="services.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
+                <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-balance-scale text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Legal Consultancy</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">Tech contracts, AI intellectual property protection, regulatory compliance & dispute resolution.</p>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
+                    View details <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
+                </span>
+            </a>
+
+            <!-- Service 4 -->
+            <a href="courses.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
+                <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-graduation-cap text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">AI-Powered Education</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">Premium coaching for JEE, NEET, IB & IGCSE — online and offline with personalized AI tools.</p>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
+                    Browse Courses <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
+                </span>
+            </a>
+        </div>
     </section>
 
-    <section id="contact" class="section" style="background:#0f172a; color:white;">
-        <h2>Get In Touch</h2>
-        <p>📞 <strong>+91 8072940943</strong> &nbsp;|&nbsp; ✉️ <strong>kmukesh1@gmail.com</strong></p>
-        <a href="mailto:kmukesh1@gmail.com" class="btn">Book Consultation</a>
+    <!-- WHY US -->
+    <section class="bg-white py-16 border-y border-slate-100">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                <div>
+                    <span class="text-blue-600 font-semibold tracking-widest text-sm">THE ALGOLEX DIFFERENCE</span>
+                    <h2 class="section-header mt-4 text-slate-900 leading-none">Why leading professionals<br>choose AlgoLex</h2>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-x-8 gap-y-10">
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-microchip text-3xl text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Deep Technical Expertise</h4>
+                            <p class="text-slate-600 mt-1.5 text-[15px]">PhD-level research in Quantum AI combined with 15+ years in computer science education.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-handshake text-3xl text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Holistic Approach</h4>
+                            <p class="text-slate-600 mt-1.5 text-[15px]">We integrate technology, pedagogy, and legal strategy for complete, future-proof solutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-user-graduate text-3xl text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Personalized Mentorship</h4>
+                            <p class="text-slate-600 mt-1.5 text-[15px]">Every student and client receives tailored guidance, not generic templates.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-globe text-3xl text-blue-600"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Global Standards, Local Insight</h4>
+                            <p class="text-slate-600 mt-1.5 text-[15px]">Curriculum aligned with international boards while understanding Indian competitive exam realities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- TESTIMONIALS -->
+    <section class="max-w-screen-2xl mx-auto px-6 py-20">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <span class="text-blue-600 font-semibold tracking-[3px] text-sm">REAL RESULTS</span>
+            <h2 class="section-header mt-3">What our clients & students say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 premium-shadow">
+                <div class="flex items-center gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="italic text-slate-700 leading-relaxed">“Prof. Mukesh’s guidance on Quantum Machine Learning completely transformed our research direction. His ability to bridge theory and practical implementation is exceptional.”</p>
+                <div class="mt-6 flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-200 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/40?img=15" alt="Dr. Priya Sharma"></div>
+                    <div>
+                        <div class="font-semibold">Dr. Priya Sharma</div>
+                        <div class="text-xs text-slate-500">Principal Researcher, Quantum Labs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 premium-shadow">
+                <div class="flex items-center gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="italic text-slate-700 leading-relaxed">“My son scored 99.2 percentile in JEE Advanced after joining AlgoLex. The personalized AI-assisted learning plan and constant mentorship made all the difference.”</p>
+                <div class="mt-6 flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-200 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/40?img=25" alt="Rajesh Patel"></div>
+                    <div>
+                        <div class="font-semibold">Rajesh Patel</div>
+                        <div class="text-xs text-slate-500">Parent of JEE Advanced Topper</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 premium-shadow">
+                <div class="flex items-center gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="italic text-slate-700 leading-relaxed">“Their legal team helped us structure our AI startup’s IP strategy and contracts with clarity and foresight. Invaluable support for any deep-tech founder.”</p>
+                <div class="mt-6 flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-200 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/40?img=40" alt="Ananya Mehra"></div>
+                    <div>
+                        <div class="font-semibold">Ananya Mehra</div>
+                        <div class="text-xs text-slate-500">Founder & CEO, NeuroForge AI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="bg-slate-900 text-white py-16">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-5 mb-10 md:mb-0">
+                    <div class="relative">
+                        <img src="https://i.pravatar.cc/520?img=68" 
+                             alt="Prof. Mukesh Kumar, Founder of AlgoLex Solutions" 
+                             class="rounded-3xl w-full shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-white text-slate-900 px-5 py-3 rounded-2xl shadow-xl text-sm font-medium">
+                            <span class="font-semibold">PhD Researcher</span><br>
+                            <span class="text-xs text-slate-500">Quantum AI • CSE Professor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7">
+                    <span class="uppercase tracking-[3px] text-blue-400 text-xs font-bold">MEET THE FOUNDER</span>
+                    <h2 class="font-display text-5xl tracking-tighter mt-3 mb-6">Prof. Mukesh Kumar</h2>
+                    
+                    <div class="prose prose-invert text-blue-100 max-w-none">
+                        <p class="text-lg">Professor of Computer Science at SMIT College and active PhD researcher specializing in Quantum Machine Learning and Quantum Computing applications.</p>
+                        <p class="mt-4">With over 15 years of experience in higher education and a passion for emerging technologies, Prof. Mukesh has mentored hundreds of students to top ranks in JEE, NEET and international boards while simultaneously pushing the frontiers of Quantum AI research.</p>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl text-sm">
+                            <i class="fa-solid fa-graduation-cap mr-2"></i> 
+                            <span>Professor, CSE @ SMIT</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl text-sm">
+                            <i class="fa-solid fa-microscope mr-2"></i> 
+                            <span>Quantum AI PhD Researcher</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="contact" class="max-w-screen-2xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-display text-5xl tracking-tighter">Ready to elevate your<br>future with AlgoLex?</h2>
+            <p class="mt-4 text-xl text-slate-600">Whether you're a student aiming for top ranks, a researcher exploring Quantum AI, or a founder needing legal strategy — we're here to help.</p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request&body=Hello%20Prof.%20Mukesh,%0A%0AI%20would%20like%20to%20book%20a%20consultation%20regarding%20..." 
+                   class="modern-btn px-10 py-4 bg-blue-600 hover:bg-blue-700 transition-all text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Send Email</span>
+                </a>
+                <a href="tel:+918072940943" 
+                   class="modern-btn px-8 py-4 border-2 border-slate-300 hover:bg-slate-50 font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call +91 80729 40943</span>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-sm text-slate-500">Response within 24 hours • Flexible online & offline consultations available</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 pt-14 pb-8 px-6 text-sm">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-y-10 pb-10 border-b border-white/10">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center">
+                            <span class="text-white font-bold text-xl tracking-tighter">AL</span>
+                        </div>
+                        <span class="font-display text-white text-2xl tracking-tighter">AlgoLex Solutions</span>
+                    </div>
+                    <p class="max-w-xs">Bridging Quantum AI, premium education, and expert legal services since 2024.</p>
+                </div>
+
+                <div class="md:col-span-3">
+                    <div class="font-semibold text-white mb-4 tracking-wider text-xs">EXPLORE</div>
+                    <div class="space-y-2.5">
+                        <a href="services.html" class="block hover:text-white transition-colors">Our Services</a>
+                        <a href="courses.html" class="block hover:text-white transition-colors">Courses & Programs</a>
+                        <a href="quantum-ai.html" class="block hover:text-white transition-colors">Quantum AI Research</a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4">
+                    <div class="font-semibold text-white mb-4 tracking-wider text-xs">GET IN TOUCH</div>
+                    <div class="space-y-2">
+                        <a href="mailto:kmukesh1@gmail.com" class="flex items-center gap-x-2 hover:text-white transition-colors">
+                            <i class="fa-solid fa-envelope w-4"></i> kmukesh1@gmail.com
+                        </a>
+                        <a href="tel:+918072940943" class="flex items-center gap-x-2 hover:text-white transition-colors">
+                            <i class="fa-solid fa-phone w-4"></i> +91 80729 40943
+                        </a>
+                        <div class="pt-1 text-xs">Ambattur, Tamil Nadu, India</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row md:items-center justify-between text-xs gap-y-2">
+                <div>© 2026 AlgoLex Solutions. All rights reserved.</div>
+                <div class="flex gap-x-6">
+                    <span>Privacy</span>
+                    <span>Terms</span>
+                    <span>Legal Disclaimer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#2563eb');
+        }
+        
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple confetti or celebration on CTA (optional fun)
+        // Can be removed if not desired
+        console.log('%c[AlgoLex] Modern website loaded successfully', 'color:#64748b');
+        
+        initializeTailwind();
+    </script>
 </body>
 </html>
