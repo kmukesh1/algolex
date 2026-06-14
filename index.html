@@ -386,36 +386,37 @@
         </div>
     </footer>
 
-    <!-- CONTACT MODAL with Serverless Form -->
+    <!-- CONTACT MODAL - Now opens WhatsApp -->
     <div id="contact-modal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
         <div class="modal bg-white rounded-3xl max-w-lg w-full shadow-2xl overflow-hidden">
             <div class="px-8 pt-8 pb-6">
                 <div class="flex justify-between items-center mb-6">
                     <div>
                         <h3 class="font-display text-3xl tracking-tight">Book a Consultation</h3>
-                        <p class="text-slate-500 text-sm mt-1">We'll respond within 24 hours</p>
+                        <p class="text-slate-500 text-sm mt-1">We usually reply within a few minutes on WhatsApp</p>
                     </div>
                     <button onclick="hideContactModal()" class="text-3xl text-slate-400 hover:text-slate-600">&times;</button>
                 </div>
 
-                <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <!-- WhatsApp Form -->
+                <form id="whatsapp-form">
                     <div class="grid grid-cols-1 gap-5">
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name</label>
-                            <input type="text" name="name" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Your name">
+                            <input type="text" id="wa-name" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Your name" value="">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Email Address</label>
-                            <input type="email" name="email" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="you@example.com">
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Email Address (Optional)</label>
+                            <input type="email" id="wa-email" class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="you@example.com">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1.5">I'm interested in</label>
-                            <select name="interest" class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500">
+                            <select id="wa-interest" class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500">
                                 <option value="JEE or NEET Coaching">JEE or NEET Coaching</option>
                                 <option value="IB or IGCSE Coaching">IB or IGCSE Coaching</option>
                                 <option value="Engineering Mathematics (All Years)">Engineering Mathematics (All Years)</option>
                                 <option value="CSE Paper Guidance (GATE + University)">CSE Paper Guidance (GATE + University)</option>
-                                <option value="Soft Skills Training">Soft Skills Training</option>
+                                <option value="Soft Skills Training" selected>Soft Skills Training</option>
                                 <option value="Quantum AI / Research Collaboration">Quantum AI / Research Collaboration</option>
                                 <option value="Legal Consultancy">Legal Consultancy</option>
                                 <option value="Quantitative Trading Strategies">Quantitative Trading Strategies</option>
@@ -424,30 +425,19 @@
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1.5">Message / Requirements</label>
-                            <textarea name="message" rows="4" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Tell us about your goals or questions..."></textarea>
+                            <textarea id="wa-message" rows="4" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Tell us about your goals or questions...">Hi, I want to know more about </textarea>
                         </div>
                     </div>
 
-                    <input type="hidden" name="_subject" value="New Consultation Request from AlgoLex Website">
-
                     <div class="mt-8 flex gap-4">
                         <button type="button" onclick="hideContactModal()" class="flex-1 py-3.5 border border-slate-300 text-slate-700 font-semibold rounded-3xl hover:bg-slate-50">Cancel</button>
-                        <button type="submit" class="flex-1 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
-                            <i class="fa-solid fa-paper-plane"></i>
-                            <span>Send Message</span>
+                        <button type="button" onclick="sendToWhatsApp()" class="flex-1 py-3.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Send via WhatsApp</span>
                         </button>
                     </div>
-                    <p class="text-center text-xs text-slate-500 mt-4">Powered by Formspree (serverless)</p>
+                    <p class="text-center text-xs text-slate-500 mt-4">You will be redirected to WhatsApp</p>
                 </form>
-
-                <div id="form-success" class="hidden text-center py-8">
-                    <div class="mx-auto w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4">
-                        <i class="fa-solid fa-check text-3xl"></i>
-                    </div>
-                    <h4 class="font-semibold text-xl">Thank you!</h4>
-                    <p class="text-slate-600 mt-2">Your message has been sent successfully.<br>We will get back to you within 24 hours.</p>
-                    <button onclick="resetAndCloseModal()" class="mt-6 px-6 py-2 text-sm font-medium text-blue-600 hover:text-blue-700">Close</button>
-                </div>
             </div>
         </div>
     </div>
@@ -483,8 +473,6 @@
         function showContactModal() {
             document.getElementById('contact-modal').classList.remove('hidden');
             document.getElementById('contact-modal').classList.add('flex');
-            document.getElementById('contact-form').classList.remove('hidden');
-            document.getElementById('form-success').classList.add('hidden');
         }
 
         function hideContactModal() {
@@ -493,44 +481,29 @@
             modal.classList.add('hidden');
         }
 
-        function resetAndCloseModal() {
+        function sendToWhatsApp() {
+            const name = document.getElementById('wa-name').value.trim();
+            const email = document.getElementById('wa-email').value.trim();
+            const interest = document.getElementById('wa-interest').value;
+            const message = document.getElementById('wa-message').value.trim();
+
+            if (!name || !message) {
+                alert('Please enter your name and message');
+                return;
+            }
+
+            let text = `Hello AlgoLex,%0A%0A`;
+            text += `Name: ${name}%0A`;
+            if (email) text += `Email: ${email}%0A`;
+            text += `Interested in: ${interest}%0A`;
+            text += `Message: ${message}`;
+
+            // Your WhatsApp number
+            const phone = '918072940943';
+            const whatsappURL = `https://wa.me/${phone}?text=${text}`;
+
+            window.open(whatsappURL, '_blank');
             hideContactModal();
-            document.getElementById('contact-form').reset();
-            document.getElementById('contact-form').classList.remove('hidden');
-            document.getElementById('form-success').classList.add('hidden');
-        }
-
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending...`;
-                submitBtn.disabled = true;
-
-                const formData = new FormData(contactForm);
-
-                try {
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
-
-                    if (response.ok) {
-                        contactForm.classList.add('hidden');
-                        document.getElementById('form-success').classList.remove('hidden');
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    alert('Something went wrong. Please try again or email kmukesh1@gmail.com directly.');
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }
-            });
         }
 
         document.getElementById('contact-modal').addEventListener('click', function(e) {
@@ -544,7 +517,7 @@
             }
         });
 
-        console.log('%c[AlgoLex] Hero fixed with strong dark background', 'color:#64748b');
+        console.log('%c[AlgoLex] Contact form changed to WhatsApp', 'color:#64748b');
         initializeTailwind();
     </script>
 </body>
