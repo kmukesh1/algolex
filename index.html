@@ -4,66 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlgoLex Solutions | Quantum AI, World-Class Education & Legal Services</title>
-    <meta name="description" content="AlgoLex Solutions bridges Quantum AI Research, premium AI-powered education (JEE, NEET, IB, IGCSE), and expert legal consultancy. Founded by Prof. Mukesh Kumar, PhD Researcher in Quantum AI.">
-    <meta name="keywords" content="Quantum AI, JEE coaching, NEET coaching, IB coaching, IGCSE, legal consultancy, quantitative trading, AlgoLex Solutions, Prof. Mukesh Kumar">
+    <meta name="description" content="AlgoLex Solutions bridges Quantum AI Research, premium AI-powered education (JEE, NEET, IB, IGCSE), and expert legal consultancy. Founded by Prof. Mukesh Kumar, PhD Researcher in Quantum AI and featured speaker at Global Innovation Summit.">
+    <meta name="keywords" content="Quantum AI, JEE coaching, NEET coaching, IB coaching, IGCSE, legal consultancy, quantitative trading, AlgoLex Solutions, Prof. Mukesh Kumar, Quantum Machine Learning">
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="AlgoLex Solutions | Quantum AI, Education & Legal Services">
+    <meta property="og:description" content="Founded by Prof. Mukesh Kumar. Expert Quantum AI solutions, world-class JEE/NEET/IB coaching, and specialized legal consultancy.">
+    <meta property="og:image" content="https://kmukesh1.github.io/algolex/founder.jpg">
+    <meta property="og:url" content="https://kmukesh1.github.io/algolex/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AlgoLex Solutions | Quantum AI & Premium Education">
+    <meta name="twitter:description" content="Prof. Mukesh Kumar — Quantum AI PhD Researcher & Educator. Transformative solutions in AI, Education & Law.">
+    <meta name="twitter:image" content="https://kmukesh1.github.io/algolex/founder.jpg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-light: #3b82f6;
-        }
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        .font-display {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.025em;
-        }
-        .section-header {
-            font-size: 2.75rem;
-            line-height: 1.1;
-            font-weight: 700;
-            letter-spacing: -0.04em;
-        }
-        .nav-link {
-            transition: color 0.2s ease;
-        }
-        .nav-link:hover {
-            color: #60a5fa;
-        }
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        .modern-btn {
-            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .modern-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.3), 0 4px 6px -4px rgb(37 99 235 / 0.3);
-        }
-        .glass {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-        }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-        }
-        .stat-number {
-            font-variant-numeric: tabular-nums;
-        }
-        .premium-shadow {
-            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
-        }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.025em; }
+        .section-header { font-size: 2.75rem; line-height: 1.1; font-weight: 700; letter-spacing: -0.04em; }
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #60a5fa; }
+        .service-card, .course-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover, .course-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .modern-btn { transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .modern-btn:hover { transform: translateY(-2px); }
+        .modal { animation: modalPop 0.2s ease-out forwards; }
+        @keyframes modalPop { from { opacity: 0; transform: scale(0.95) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -82,7 +51,6 @@
                     </div>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                     <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600">Home</a>
                     <a href="services.html" class="nav-link text-slate-700 hover:text-blue-600">Services</a>
@@ -91,20 +59,14 @@
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-4">
-                    <a href="#contact" 
-                       class="px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 rounded-3xl transition-colors">
-                        Contact
-                    </a>
-                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
-                       class="modern-btn px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2">
+                    <button onclick="showContactModal()" class="px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 rounded-3xl transition-colors">Contact</button>
+                    <button onclick="showContactModal()" class="modern-btn px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2">
                         <i class="fa-solid fa-calendar-check"></i>
                         <span>Book Consultation</span>
-                    </a>
+                    </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
-                        class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-2xl transition-colors">
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-2xl transition-colors">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
@@ -118,12 +80,10 @@
                 <a href="courses.html" class="py-2 text-slate-700">Courses</a>
                 <a href="quantum-ai.html" class="py-2 text-slate-700">Quantum AI</a>
                 <div class="pt-4 border-t flex flex-col gap-y-3">
-                    <a href="#contact" class="py-2.5 text-center text-slate-700 font-medium border border-slate-200 rounded-3xl">Contact Us</a>
-                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
-                       class="py-3 text-center bg-blue-600 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
-                        <i class="fa-solid fa-calendar-check"></i> 
-                        Book Consultation
-                    </a>
+                    <button onclick="showContactModal(); document.getElementById('mobile-menu').classList.add('hidden')" class="py-2.5 text-center text-slate-700 font-medium border border-slate-200 rounded-3xl">Contact Us</button>
+                    <button onclick="showContactModal(); document.getElementById('mobile-menu').classList.add('hidden')" class="py-3 text-center bg-blue-600 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
+                        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+                    </button>
                 </div>
             </div>
         </div>
@@ -150,16 +110,14 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#services" 
-                       class="modern-btn group inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-white text-slate-900 font-semibold text-lg rounded-3xl hover:bg-blue-50 transition-all">
+                    <a href="#services" class="modern-btn group inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-white text-slate-900 font-semibold text-lg rounded-3xl hover:bg-blue-50 transition-all">
                         Explore Services
                         <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request" 
-                       class="modern-btn inline-flex items-center justify-center gap-x-3 px-8 py-4 border border-white/40 hover:bg-white/10 text-white font-semibold text-lg rounded-3xl transition-all">
+                    <button onclick="showContactModal()" class="modern-btn inline-flex items-center justify-center gap-x-3 px-8 py-4 border border-white/40 hover:bg-white/10 text-white font-semibold text-lg rounded-3xl transition-all">
                         <i class="fa-solid fa-phone"></i>
                         <span>Book a Strategy Call</span>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="mt-12 flex items-center justify-center gap-x-8 text-sm">
@@ -183,52 +141,40 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Service 1 -->
             <a href="quantum-ai.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
                 <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <i class="fa-solid fa-atom text-3xl"></i>
                 </div>
                 <h3 class="font-semibold text-2xl tracking-tight mb-3">Quantum AI & Machine Learning</h3>
                 <p class="text-slate-600 leading-relaxed mb-6">Custom Quantum ML models, intelligent automation systems, and advanced optimization research.</p>
-                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
-                    Explore Quantum AI <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
-                </span>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">Explore Quantum AI <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i></span>
             </a>
 
-            <!-- Service 2 -->
             <a href="services.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
                 <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     <i class="fa-solid fa-chart-line text-3xl"></i>
                 </div>
                 <h3 class="font-semibold text-2xl tracking-tight mb-3">Quantitative Trading</h3>
                 <p class="text-slate-600 leading-relaxed mb-6">Algorithmic trading strategies, robust backtesting frameworks, and AI-driven market intelligence.</p>
-                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
-                    Learn more <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
-                </span>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">Learn more <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i></span>
             </a>
 
-            <!-- Service 3 -->
             <a href="services.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
                 <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                     <i class="fa-solid fa-balance-scale text-3xl"></i>
                 </div>
                 <h3 class="font-semibold text-2xl tracking-tight mb-3">Legal Consultancy</h3>
                 <p class="text-slate-600 leading-relaxed mb-6">Tech contracts, AI intellectual property protection, regulatory compliance & dispute resolution.</p>
-                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
-                    View details <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
-                </span>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">View details <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i></span>
             </a>
 
-            <!-- Service 4 -->
             <a href="courses.html" class="service-card group block bg-white border border-slate-200 rounded-3xl p-8 hover:border-blue-200">
                 <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
                     <i class="fa-solid fa-graduation-cap text-3xl"></i>
                 </div>
                 <h3 class="font-semibold text-2xl tracking-tight mb-3">AI-Powered Education</h3>
                 <p class="text-slate-600 leading-relaxed mb-6">Premium coaching for JEE, NEET, IB & IGCSE — online and offline with personalized AI tools.</p>
-                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">
-                    Browse Courses <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i>
-                </span>
+                <span class="inline-flex items-center text-blue-600 font-medium text-sm group-hover:gap-x-2 transition-all">Browse Courses <i class="fa-solid fa-arrow-right ml-1.5 group-hover:ml-2 transition-all"></i></span>
             </a>
         </div>
     </section>
@@ -327,18 +273,18 @@
         </div>
     </section>
 
-    <!-- FOUNDER -->
+    <!-- FOUNDER (TWEAKED) -->
     <section class="bg-slate-900 text-white py-16">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-x-12 items-center">
                 <div class="md:col-span-5 mb-10 md:mb-0">
                     <div class="relative">
                         <img src="founder.jpg" 
-                             alt="Prof. Mukesh Kumar, Founder of AlgoLex Solutions - MD at Global Innovation Summit" 
-                             class="rounded-3xl w-full shadow-2xl object-cover">
+                             alt="Prof. Mukesh Kumar, Founder of AlgoLex Solutions speaking at Global Innovation Summit" 
+                             class="rounded-3xl w-full shadow-2xl object-cover aspect-[4/3]">
                         <div class="absolute -bottom-4 -right-4 bg-white text-slate-900 px-5 py-3 rounded-2xl shadow-xl text-sm font-medium">
-                            <span class="font-semibold">PhD Researcher</span><br>
-                            <span class="text-xs text-slate-500">Quantum AI • CSE Professor</span>
+                            <span class="font-semibold">PhD Researcher • Featured Speaker</span><br>
+                            <span class="text-xs text-slate-500">Global Innovation Summit</span>
                         </div>
                     </div>
                 </div>
@@ -346,19 +292,23 @@
                     <span class="uppercase tracking-[3px] text-blue-400 text-xs font-bold">MEET THE FOUNDER</span>
                     <h2 class="font-display text-5xl tracking-tighter mt-3 mb-6">Prof. Mukesh Kumar</h2>
                     
-                    <div class="prose prose-invert text-blue-100 max-w-none">
-                        <p class="text-lg">Professor of Computer Science at SMIT College and active PhD researcher specializing in Quantum Machine Learning and Quantum Computing applications.</p>
-                        <p class="mt-4">With over 15 years of experience in higher education and a passion for emerging technologies, Prof. Mukesh has mentored hundreds of students to top ranks in JEE, NEET and international boards while simultaneously pushing the frontiers of Quantum AI research.</p>
+                    <div class="prose prose-invert text-blue-100 max-w-none text-[15px]">
+                        <p>Professor of Computer Science at SMIT College and active PhD researcher specializing in Quantum Machine Learning and Quantum Computing applications. With over 15 years in higher education, he has mentored hundreds of students to top ranks in JEE, NEET, and international boards.</p>
+                        <p class="mt-3">A featured speaker at the Global Innovation Summit, Prof. Mukesh bridges cutting-edge Quantum AI research with practical education and legal strategy — delivering transformative results for students, researchers, and organizations.</p>
                     </div>
 
-                    <div class="mt-8 flex flex-wrap gap-3">
-                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl text-sm">
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl">
                             <i class="fa-solid fa-graduation-cap mr-2"></i> 
                             <span>Professor, CSE @ SMIT</span>
                         </div>
-                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl text-sm">
+                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl">
                             <i class="fa-solid fa-microscope mr-2"></i> 
                             <span>Quantum AI PhD Researcher</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 px-4 h-9 rounded-3xl col-span-1 sm:col-span-2">
+                            <i class="fa-solid fa-globe mr-2"></i> 
+                            <span>Featured Speaker, Global Innovation Summit</span>
                         </div>
                     </div>
                 </div>
@@ -373,13 +323,11 @@
             <p class="mt-4 text-xl text-slate-600">Whether you're a student aiming for top ranks, a researcher exploring Quantum AI, or a founder needing legal strategy — we're here to help.</p>
             
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:kmukesh1@gmail.com?subject=Consultation%20Request&body=Hello%20Prof.%20Mukesh,%0A%0AI%20would%20like%20to%20book%20a%20consultation%20regarding%20..." 
-                   class="modern-btn px-10 py-4 bg-blue-600 hover:bg-blue-700 transition-all text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                <button onclick="showContactModal()" class="modern-btn px-10 py-4 bg-blue-600 hover:bg-blue-700 transition-all text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
                     <i class="fa-solid fa-envelope"></i>
-                    <span>Send Email</span>
-                </a>
-                <a href="tel:+918072940943" 
-                   class="modern-btn px-8 py-4 border-2 border-slate-300 hover:bg-slate-50 font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                    <span>Send Message</span>
+                </button>
+                <a href="tel:+918072940943" class="modern-btn px-8 py-4 border-2 border-slate-300 hover:bg-slate-50 font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
                     <i class="fa-solid fa-phone"></i>
                     <span>Call +91 80729 40943</span>
                 </a>
@@ -437,16 +385,66 @@
         </div>
     </footer>
 
+    <!-- CONTACT MODAL (Working Form) -->
+    <div id="contact-modal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
+        <div class="modal bg-white rounded-3xl max-w-lg w-full shadow-2xl overflow-hidden">
+            <div class="px-8 pt-8 pb-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h3 class="font-display text-3xl tracking-tight">Book a Consultation</h3>
+                        <p class="text-slate-500 text-sm mt-1">We'll respond within 24 hours</p>
+                    </div>
+                    <button onclick="hideContactModal()" class="text-3xl text-slate-400 hover:text-slate-600">&times;</button>
+                </div>
+
+                <form id="contact-form" onsubmit="submitContactForm(event)">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name</label>
+                            <input type="text" id="name" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Email Address</label>
+                            <input type="email" id="email" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="you@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">I'm interested in</label>
+                            <select id="interest" class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500">
+                                <option value="Quantum AI Consultation">Quantum AI / Research Collaboration</option>
+                                <option value="JEE / NEET Coaching">JEE or NEET Coaching</option>
+                                <option value="IB / IGCSE Coaching">IB or IGCSE Coaching</option>
+                                <option value="Legal Consultancy">Legal Consultancy</option>
+                                <option value="Quantitative Trading">Quantitative Trading Strategies</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Message / Requirements</label>
+                            <textarea id="message" rows="4" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:border-blue-500" placeholder="Tell us about your goals or questions..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-4">
+                        <button type="button" onclick="hideContactModal()" class="flex-1 py-3.5 border border-slate-300 text-slate-700 font-semibold rounded-3xl hover:bg-slate-50">Cancel</button>
+                        <button type="submit" class="flex-1 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-3xl flex items-center justify-center gap-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </div>
+                    <p class="text-center text-xs text-slate-500 mt-4">Your message will open in your email app (Gmail/Outlook etc.)</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Tailwind script
         function initializeTailwind() {
             document.documentElement.style.setProperty('--accent', '#2563eb');
         }
-        
-        // Mobile menu toggle
+
+        // Mobile menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
         if (mobileBtn && mobileMenu) {
             mobileBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
@@ -458,25 +456,81 @@
             });
         }
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
                 }
             });
         });
 
-        // Simple confetti or celebration on CTA (optional fun)
-        // Can be removed if not desired
-        console.log('%c[AlgoLex] Modern website loaded successfully', 'color:#64748b');
-        
+        // Contact Modal Functions
+        function showContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+            document.getElementById('contact-modal').classList.add('flex');
+        }
+
+        function hideContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Working Contact Form (opens email client with prefilled data)
+        function submitContactForm(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const interest = document.getElementById('interest').value;
+            const message = document.getElementById('message').value;
+
+            const subject = encodeURIComponent(`AlgoLex Consultation Request: ${interest}`);
+            const body = encodeURIComponent(
+                `Hello Prof. Mukesh Kumar,\n\n` +
+                `My name is ${name}.\n` +
+                `Email: ${email}\n` +
+                `Interest: ${interest}\n\n` +
+                `Message:\n${message}\n\n` +
+                `Best regards,\n${name}`
+            );
+
+            // Open default email client with pre-filled message
+            window.location.href = `mailto:kmukesh1@gmail.com?subject=${subject}&body=${body}`;
+
+            // Close modal after a short delay
+            setTimeout(() => {
+                hideContactModal();
+                // Optional: show thank you toast
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-3xl text-sm shadow-xl flex items-center gap-x-2';
+                toast.innerHTML = `<i class="fa-solid fa-check-circle text-emerald-400"></i> <span>Thank you! Your email app should have opened.</span>`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 4500);
+            }, 800);
+        }
+
+        // Close modal on outside click
+        document.getElementById('contact-modal').addEventListener('click', function(e) {
+            if (e.target.id === 'contact-modal') {
+                hideContactModal();
+            }
+        });
+
+        // Keyboard escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('contact-modal');
+                if (!modal.classList.contains('hidden')) {
+                    hideContactModal();
+                }
+            }
+        });
+
+        console.log('%c[AlgoLex] Modern website with working contact form & enhanced SEO loaded', 'color:#64748b');
         initializeTailwind();
     </script>
 </body>
